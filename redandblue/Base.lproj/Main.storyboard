@@ -1,25 +1,69 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="redandblue" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cartoon-landscape-md" translatesAutoresizingMaskIntoConstraints="NO" id="CNl-OL-mKg">
+                                <rect key="frame" x="-515" y="0.0" width="1214" height="756"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5SV-rQ-yuA">
+                                <rect key="frame" x="20" y="535" width="335" height="85"/>
+                                <state key="normal" title="Bye, Bye Red Birdy" image="Bye-Bye-Red-Birdy">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="MakeRedBirdDisappear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JyC-ms-O9b"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHR-8Q-o0F">
+                                <rect key="frame" x="20" y="442" width="335" height="85"/>
+                                <state key="normal" title="Bye, Bye Blue Birdy" image="Bye-Bye-Blue-Birdy"/>
+                                <connections>
+                                    <action selector="MakeBlueBirdDisappear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zsw-fV-M03"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blue-bird-md" translatesAutoresizingMaskIntoConstraints="NO" id="XAG-jy-9PL">
+                                <rect key="frame" x="5" y="104" width="175" height="150"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="purplebird-md" translatesAutoresizingMaskIntoConstraints="NO" id="eCD-PZ-xxE">
+                                <rect key="frame" x="196" y="104" width="175" height="150"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="Background" destination="CNl-OL-mKg" id="1JI-06-dvg"/>
+                        <outlet property="BlueButton" destination="jHR-8Q-o0F" id="axz-iU-K3u"/>
+                        <outlet property="Bluebird" destination="XAG-jy-9PL" id="GyC-AC-ViQ"/>
+                        <outlet property="RedButton" destination="5SV-rQ-yuA" id="VOa-V0-mmu"/>
+                        <outlet property="Redbird" destination="eCD-PZ-xxE" id="8Cs-W6-5UA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="461.5" y="489.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Bye-Bye-Blue-Birdy" width="589" height="114"/>
+        <image name="Bye-Bye-Red-Birdy" width="585" height="114"/>
+        <image name="blue-bird-md" width="299" height="252"/>
+        <image name="cartoon-landscape-md" width="299" height="219"/>
+        <image name="purplebird-md" width="299" height="252"/>
+    </resources>
 </document>
